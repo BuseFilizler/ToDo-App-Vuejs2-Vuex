@@ -2,6 +2,7 @@ import axios from "axios";
 
 const state = {
   todos: [],
+  trueOrFalse: true,
 };
 const getters = {
   allTodos: (state) => state.todos,
@@ -50,8 +51,18 @@ const actions = {
     const limit = parseInt(
       event.target.options[event.target.options.selectedIndex].innerText
     );
+    console.log(limit);
     const response = await axios.get(
       `https://63845dbc3fa7acb14ff281d4.mockapi.io/buse?page=1&limit=${limit}`
+    );
+    commit("SET_TODOS", response.data);
+  },
+
+  async filterTodos2({ commit }, event) {
+    const trueOrFalse =
+      event.target.options[event.target.options.selectedIndex].innerText;
+    const response = await axios.get(
+      `https://63845dbc3fa7acb14ff281d4.mockapi.io/buse?completed=${trueOrFalse}`
     );
     commit("SET_TODOS", response.data);
   },

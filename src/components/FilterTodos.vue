@@ -9,16 +9,24 @@
         <option value="10">10</option>
         <option value="5">5</option>
       </select>
+
+      <select @change="filterTodos2($event)" class="w-20 px-1 py-1">
+        <option value="true">true</option>
+        <option value="false">false</option>
+      </select>
     </div>
   </div>
 </template>
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "FilterTodos",
+  computed: {
+    ...mapGetters("todos", ["trueOrFalse"]),
+  },
   methods: {
-    ...mapActions("todos", ["filterTodos"]),
+    ...mapActions("todos", ["filterTodos", "filterTodos2"]),
   },
 };
 </script>
