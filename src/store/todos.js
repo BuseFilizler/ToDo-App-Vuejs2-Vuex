@@ -42,7 +42,7 @@ const actions = {
   async addTodo({ commit }, title) {
     const response = await axios.post(
       "https://63845dbc3fa7acb14ff281d4.mockapi.io/buse",
-      { title: title, complated: false }
+      { title: title, completed: false }
     );
     commit("ADD_TODO", response.data);
   },
@@ -51,7 +51,7 @@ const actions = {
       event.target.options[event.target.options.selectedIndex].innerText
     );
     const response = await axios.get(
-      `https://63845dbc3fa7acb14ff281d4.mockapi.io/buse?_limit=${limit}`
+      `https://63845dbc3fa7acb14ff281d4.mockapi.io/buse?page=1&limit=${limit}`
     );
     commit("SET_TODOS", response.data);
   },

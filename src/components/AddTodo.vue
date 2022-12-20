@@ -1,6 +1,15 @@
 <template>
   <div class="p-4">
-    <h1 class="text-6xl font-bold text-center text-kirmizi pb-10">TODO LIST</h1>
+    <blockquote
+      class="text-6xl font-semibold italic text-center text-kirmizi pb-10"
+    >
+      <span
+        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-bg relative inline-block"
+      >
+        <span class="relative text-kirmizi">ToDo</span>
+      </span>
+      App
+    </blockquote>
     <div class="addTodo">
       <form @submit.prevent="onSubmit" class="flex gap-2">
         <input

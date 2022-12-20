@@ -1,9 +1,8 @@
-<!-- <template>
+<template>
   <div class="p-4">
     <div class="items-center flex justify-start flex-row gap-10">
       <h1 class="text-lg font-bold text-center text-kirmizi">Filter Todos</h1>
       <select @change="filterTodos($event)" class="w-20 px-1 py-1">
-        <option value="200">200</option>
         <option value="100">100</option>
         <option value="50">50</option>
         <option value="20">20</option>
@@ -23,4 +22,4 @@ export default {
   },
 };
 </script>
-<style></style> -->
+<style></style>
