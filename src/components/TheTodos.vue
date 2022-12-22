@@ -5,7 +5,7 @@
     >
       <h1 class="border-b-2 text-kirmizi text-lg font-bold">Todos :</h1>
       <div
-        class="items-center flex justify-between bg-yesil text-zinc-100 h-16 p-2 cursor-pointer"
+        class="items-center flex justify-between bg-yesil text-zinc-100 h-16 p-2 cursor-pointer shadow-2xl rounded-lg text-xl"
         :class="{ 'is-complate': todo.completed }"
         v-for="todo in allTodos"
         :key="todo.key"
@@ -13,7 +13,7 @@
       >
         {{ todo.title }}
         <i
-          class="fa-sharp fa-solid fa-trash cursor-pointer"
+          class="fa-sharp fa-solid fa-trash cursor-pointer fa-lg w-10 hover:opacity-40"
           @click="deleteTodo(todo.id)"
         ></i>
       </div>

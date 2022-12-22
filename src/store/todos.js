@@ -60,7 +60,7 @@ const actions = {
 
   async filterTodos2({ commit }, event) {
     const trueOrFalse =
-      event.target.options[event.target.options.selectedIndex].innerText;
+      event.target.options[event.target.options.selectedIndex].value;
     const response = await axios.get(
       `https://63845dbc3fa7acb14ff281d4.mockapi.io/buse?completed=${trueOrFalse}`
     );

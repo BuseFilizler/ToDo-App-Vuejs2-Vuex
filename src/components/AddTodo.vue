@@ -1,13 +1,13 @@
 <template>
-  <div class="p-4 mx-10 mt-10 bg-ortayesil rounded-lg shadow-2xl">
+  <div class="p-6 mx-10 mt-10 bg-ortayesil rounded-lg shadow-2xl">
     <blockquote
       class="text-5xl font-semibold italic text-center text-kirmizi pb-10"
     >
       Hello
       <span
-        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pembe relative inline-block"
+        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pembe relative inline-block shadow-lg"
       >
-        <span class="relative text-acikyesil">Buse</span>
+        <span class="relative text-acikyesil shadow-2xl">Buse</span>
       </span>
       <div class="pt-2">Don't forget,</div>
       <div class="pt-2">Live the moment!</div>
@@ -18,15 +18,14 @@
           type="text"
           v-model="title"
           placeholder="Add new task..."
-          class="inputTask w-full appearance-none rounded py-2 px-4 text-gray-700 leading-tight border-b-2 border-kirmizi shadow-2xl border-solid"
+          class="inputTask w-full h-12 appearance-none rounded py-2 px-4 text-gray-700 leading-tight border-b-4 border-yesil shadow-2xl bg-yesil bg-opacity-25 border-solid placeholder:text-kirmizi placeholder:opacity-40 focus:bg-opacity-10"
           required
         />
-        <div>{{ title }}</div>
         <input
           type="submit"
           name=""
           value="Submit"
-          class="bg-yesil py-2 px-1 rounded-md hover:text-kirmizi cursor-pointer w-40 text-zinc-100"
+          class="bg-yesil py-2 px-1 shadow-2xl font-extrabold rounded-md hover:text-kirmizi cursor-pointer w-40 text-zinc-100"
         />
       </form>
     </div>
