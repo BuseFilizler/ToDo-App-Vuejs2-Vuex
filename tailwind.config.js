@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        yesil: "#618685",
+        yesil: "#66bfbf",
         kirmizi: "#034f84",
         bg: "#deeaee",
+        pembe: "#f76b8a",
+        acikyesil: "#fcfefe",
+        ortayesil: "#eaf6f6",
       },
     },
   },

@@ -1,8 +1,9 @@
 <template>
-  <div class="p-4">
+  <div class="px-4 m-10 bg-ortayesil rounded-lg shadow-2xl">
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 gap-6 py-4 px-4 w-full"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 gap-6 py-4 px-2 w-full"
     >
+      <h1 class="border-b-2 text-kirmizi text-lg font-bold">Todos :</h1>
       <div
         class="items-center flex justify-between bg-yesil text-zinc-100 h-16 p-2 cursor-pointer"
         :class="{ 'is-complate': todo.completed }"
@@ -49,7 +50,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #c94c4c;
+  background-color: #f76b8a;
   text-decoration: line-through;
   color: aliceblue;
   height: 4rem;
